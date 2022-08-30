@@ -1,0 +1,16 @@
+make search input give ID
+make search button give ID
+use these to select with jquery
+make on click event for search
+capture value of input
+save in variable
+console log
+make function getCity
+make api call in this function
+console log response
+make function getUV(lat, lon) 
+make api call using lat lon grabbed from being inside getCity
+console log
+make showWeather function and create jquery cards to display
+return to getCity and call within showWeather and getUV
+pass them data to display
