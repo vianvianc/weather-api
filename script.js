@@ -27,7 +27,7 @@ $(document).ready(function () {
       url: url,
       method: "GET",
     }).then(function (response) {
-      getWeather(response.name);
+      getForecast(response.name);
     });
   }
 
@@ -48,7 +48,7 @@ $(document).ready(function () {
     getWeather(city);
   });
 
-  function getWeather(searchValue) {
+  function getForecast(searchValue) {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${searchValue}&units=imperial&appid=${apiKey}`;
     $.ajax({
       url: url,
