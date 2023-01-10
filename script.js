@@ -14,10 +14,10 @@ $(document).ready(function () {
     (error) => {
       if (storage.length > 0) {
         let city = storage[length - 1];
-        getWeather(city);
+        getForecast(city);
       }
       getUVIndex(41.85, -87.65);
-      getWeather("Denver");
+      getForecast("Denver");
     }
   );
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
     event.preventDefault();
     let city = $("#search-value").val();
     $("#search-value").val("");
-    getWeather(city);
+    getForecast(city);
     if (storage.indexOf(city) === -1) {
       storage.push(city);
     }
@@ -45,7 +45,7 @@ $(document).ready(function () {
 
   $("body").on("click", ".recent", function () {
     let city = $(this).attr("data-name");
-    getWeather(city);
+    getForecast(city);
   });
 
   function getForecast(searchValue) {
